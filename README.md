@@ -12,6 +12,8 @@ Make it sync to the test network:
 You should see something like this when the syncing is done (it takes about 20 minutes on Ropsten testnet):
 ![Mist started on Ropsten](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/ropsten_mist.png "Mist started on Ropsten")
 
+Get free test Ether from here: http://faucet.ropsten.be:3001/
+
 ## Example token
 
 Minimal token code copied from here: https://github.com/ConsenSys/Tokens
