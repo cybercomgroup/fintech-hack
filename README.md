@@ -2,6 +2,8 @@
 
 The hacking event is organized at 2017-11-22 in Tampere, Finland.
 
+THIS IS WORK IN PROGRESS! Check back shortly before the event for the final materials.
+
 ## Prerequisites
 
 Install [Mist](https://github.com/ethereum/mist/releases).
