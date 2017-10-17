@@ -72,18 +72,23 @@ Note that testrpc prints out a list of preloaded test accounts with lots of test
 to access the test wallets.
 
 Start Chrome and click Metamask icon in the top right corner:
+
 ![Metamask 1](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/metamask1.png "Metamask 1")
 
 Select local network (testrpc):
+
 ![Metamask 2](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/metamask2.png "Metamask 2")
 
 Select import existing DEN:
+
 ![Metamask 3](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/metamask3.png "Metamask 3")
 
 Copy paste your testrpc passphrase and invent a password:
+
 ![Metamask 4](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/metamask4.png "Metamask 4")
 
 You are now logged in to your testrpc local Ethereum blockchain and have a considerable sum of test ether:
+
 ![Metamask 5](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/metamask5.png "Metamask 5")
 
 ## Example token
@@ -94,7 +99,7 @@ Install Truffle ([The most popular development framework for Ethereum](https://g
 
 Minimal token code copied from here: https://github.com/ConsenSys/Tokens
 
-# Now to the Testnet
+## Now to the Testnet
 
 Start geth on testnet with console:
 
@@ -105,6 +110,7 @@ Start Mist on the test network:
     mist --network test
 
 You should see something like this when the syncing is done (it takes about 20 minutes on Ropsten testnet):
+
 ![Mist started on Ropsten](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/ropsten_mist.png "Mist started on Ropsten")
 
 Get free test Ether from here: http://faucet.ropsten.be:3001/
