@@ -12,6 +12,11 @@ Make geth sync to the test network (syncing will take about 20 minutes on a norm
 
     geth --testnet
 
+Geth has synchronized to the current time when new single blocks are received at about one per 10 seconds and the block number is around 2 million (at the time of writing) like so:
+
+    INFO [10-17|15:16:45] Imported new chain segment               blocks=1    txs=7    mgas=0.186   elapsed=24.612ms  mgasps=7.552   number=1888445 hash=484a3d…39bd16
+    INFO [10-17|15:16:52] Imported new chain segment               blocks=1    txs=0    mgas=0.000   elapsed=10.174ms  mgasps=0.000   number=1888446 hash=0d6d6e…6e7d30
+
 ## Important!
 
 If you have real ether, or any other cryptocurrency for that matter, back up your wallets/private keys well. Almost all security problems with cryptocurrency are about losing access
