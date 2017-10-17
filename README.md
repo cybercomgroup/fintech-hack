@@ -12,6 +12,11 @@ Make geth sync to the test network (syncing will take about 20 minutes on a norm
 
     geth --testnet
 
+## Important!
+
+If you have real ether, or any other cryptocurrency for that matter, back up your wallets/private keys well. Almost all security problems with cryptocurrency are about losing access
+to one's own funds, not about funds stolen. Remember to test that your backups work.
+
 ## Basics
 
 Ethereum is a blockchain that supports developing smart contracts, in addition to having a cryptocurrency (Ether) similar to Bitcoin.
@@ -90,3 +95,4 @@ Get free test Ether from here: http://faucet.ropsten.be:3001/
  * https://blog.zeppelin.solutions/the-hitchhikers-guide-to-smart-contracts-in-ethereum-848f08001f05
  * http://truffleframework.com/tutorials/pet-shop
  * https://medium.com/@codetractio/inside-an-ethereum-transaction-fa94ffca912f
+ * https://www.myetherwallet.com/
