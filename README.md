@@ -46,7 +46,7 @@ the transaction fee for the miners. If the transaction requires more gas than th
 
 Install node.js: https://nodejs.org/en/
 
-Install Metamask from Google Chrome store: https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?authuser=2
+Install Metamask from Google Chrome store: https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn
 
 Install Mist: https://github.com/ethereum/mist/releases
 
