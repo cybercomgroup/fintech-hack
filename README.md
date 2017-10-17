@@ -95,4 +95,5 @@ Get free test Ether from here: http://faucet.ropsten.be:3001/
  * https://blog.zeppelin.solutions/the-hitchhikers-guide-to-smart-contracts-in-ethereum-848f08001f05
  * http://truffleframework.com/tutorials/pet-shop
  * https://medium.com/@codetractio/inside-an-ethereum-transaction-fa94ffca912f
- * https://www.myetherwallet.com/
+ * A nice client-side wallet utility: https://www.myetherwallet.com/
+ * A good place to buy Ether from: https://www.kraken.com/
