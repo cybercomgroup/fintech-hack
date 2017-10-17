@@ -27,3 +27,10 @@ Install Truffle ([The most popular development framework for Ethereum](https://g
 
     sudo npm install -g truffle
 
+Install testrpc (a local Ethereum blockchain for development and testing, an alternative to Mist which uses real Ethereum blockchain):
+
+    sudo npm install -g ethereumjs-testrpc
+
+## See also
+
+ * https://medium.com/metamask/developing-ethereum-dapps-with-truffle-and-metamask-aa8ad7e363ba
