@@ -75,7 +75,7 @@ Start Chrome and click Metamask icon in the top right corner:
 
 ![Metamask 1](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/metamask1.png "Metamask 1")
 
-Select local network (testrpc):
+Select localhost 8545 (testrpc):
 
 ![Metamask 2](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/metamask2.png "Metamask 2")
 
