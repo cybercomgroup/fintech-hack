@@ -55,6 +55,7 @@ Install testrpc:
     sudo npm install -g ethereumjs-testrpc
 
 Start testrpc:
+
     testrpc
 
 Note that testrpc prints out a list of preloaded test accounts with lots of test ether (no real value) to experiment with. The passphrases can be copy-pasted to for example Metamask
