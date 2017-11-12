@@ -214,7 +214,7 @@ Get free test Ether from here by copy-pasting in your wallet address: http://fau
 
 Now we can also deploy your new Fintech token to the testnet for public testing and use.
 
-First set gaslimit for Truffle, so that it does not try to use unreasonable amounts of gas. Edit the file truffle.js like so:
+First set gaslimit for Truffle, so that it does not try to use unreasonable amounts of gas. Edit the file ``truffle.js`` like so:
 
     module.exports = {
       networks: {
