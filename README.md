@@ -2,8 +2,6 @@
 
 The hacking event is organized at 2017-11-22 in Tampere, Finland.
 
-THIS IS WORK IN PROGRESS! Check back shortly before the event for the final materials.
-
 ## Prerequisites
 
 Install go-ethereum (geth): https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum
