@@ -99,23 +99,145 @@ Install Truffle ([The most popular development framework for Ethereum](https://g
 
     sudo npm install -g truffle
 
-Minimal token code copied from here: https://github.com/ConsenSys/Tokens
+Then create a new directory for your new FintechToken:
 
-## Now to the Testnet
+    mkdir fintech-token
+
+Create a Truffle initial project in fintech directory:
+
+    cd fintech-token
+    truffle init
+
+You can look at the example code, but it's not a standard token, just an example.
+
+Let's make a proper HumanStandardToken called FintechToken.
+
+First, you need to remove the example token code from the Truffle project leaving only Migrations contract:
+
+    rm test/*
+    rm contracts/MetaCoin.sol contracts/ConvertLib.sol
+
+Then we will copy the minimal token base classes (Token.sol, StandardToken.sol, HumanStandardToken.sol) from [ConsenSys examples](https://github.com/ConsenSys/Tokens):
+
+    cp ../ethereum-token/*.sol contracts/
+
+Now these base classes provide the standard ERC 20 token APIs for a contract that inherits them, so that standard Ethereum wallet applications know that this contract is a token contract, and can show balances in a human-friendly way.
+
+Now, let's write some Solidity!
+
+We will create the actual token contract. Create a new file named ``contracts/FintechToken.sol`` with the following content:
+
+    import "./HumanStandardToken.sol";
+    
+    pragma solidity ^0.4.8;
+    
+    contract FintechToken is HumanStandardToken {
+        function FintechToken() HumanStandardToken(1000, 'Fintech', 2, 'FIN'){
+        }
+    }
+
+The contract is really simple, as it only calls the base class HumanStandardToken with defined values of 1000 units total, the name of the token "Fintech", two decimals shown by default, and with the token currency symbol of "FIN".
+
+Then we need to define the migrations for deploying the contract. Edit the file ``migrations/2_deploy_contracts.js`` so that it contains only the following (removing the Truffle default contracts)):
+
+    var FintechToken = artifacts.require("./FintechToken.sol");
+    
+    module.exports = function(deployer) {
+      deployer.deploy(FintechToken);
+    };
+
+Now, let's compile the contract:
+
+    truffle compile
+
+You should not get any errors as the contract is compiled to the build directory in JSON files containing compiled binaries of the contracts.
+
+Now see again your balance in Metamask in Chrome, it should be 100 ETH, and no tokens:
+
+![DeployLocal 1](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/deploy_local1.png "DeployLocal 1")
+
+Now let's deploy the contract. Note that deployment costs Ethers, but that is not a problem as we are using a local test network with 100 ETH of virtual currency:
+
+    truffle deploy
+
+You will get messages showing the migrations being run, which first deploy the Migrations contract and then your own new contract FintechToken.
+
+Especially important is the following line which shows you the token contract address. Don't lose this (your address will differ from this example):
+
+    FintechToken: 0xd6278722a1bd3c5ffe92320c35a766bc7b7dbc9e
+
+Now check you Metamask account again. You will see your balance has decreased a bit as deploying the contracts consumed gas:
+
+![DeployLocal 2](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/deploy_local2.png "DeployLocal 2")
+
+Now, let's check our token balance. Add a new token:
+
+![DeployLocal 3](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/deploy_local3.png "DeployLocal 3")
+
+Use the contract address you took from the deploy step and paste it to Metamask Add Token address (Note how it fills up the other information automatically as your token implements the HumanStandardToken interface):
+
+![DeployLocal 4](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/deploy_local4.png "DeployLocal 4")
+
+And now you see how you own 10 Fintechs:
+
+![DeployLocal 5](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/deploy_local5.png "DeployLocal 5")
+
+MetaMask does not support sending these tokens to other addresses or people, although that would be possible using some other wallet software.
+
+Congratulations! You have just created your own Ethereum token on your own local machine!
+
+## Advanced: Now to the Testnet
+
+Local testing is one thing, but to really test your contract, you should deploy it to a public Ethereum testnet.
+
+Kill your testrpc with ctrl-c. Next we will use a real Ethereum blockchain, a testnet which only uses test Ethers with no value.
 
 Start geth on testnet with console:
 
     geth --testnet --rpc console 2>> geth.log
 
-Start Mist on the test network:
+See the value geth uses for its ipc file, you'll need it in the next step, like this:
 
-    mist --network test
+    datadir: /home/tero/.ethereum/testnet
+
+Start Mist on the test network (use the datadir from the previous step):
+
+    mist --network test --rpc /home/tero/.ethereum/testnet/geth.ipc
 
 You should see something like this when the syncing is done (it takes about 20 minutes on Ropsten testnet):
 
 ![Mist started on Ropsten](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/ropsten_mist.png "Mist started on Ropsten")
 
-Get free test Ether from here: http://faucet.ropsten.be:3001/
+Get free test Ether from here by copy-pasting in your wallet address: http://faucet.ropsten.be:3001/
+
+Now we can also deploy your new Fintech token to the testnet for public testing and use.
+
+First set gaslimit for Truffle, so that it does not try to use unreasonable amounts of gas. Edit the file truffle.js like so:
+
+    module.exports = {
+      networks: {
+        development: {
+          host: "localhost",
+          port: 8545,
+          network_id: "*", // Match any network id
+          gas: 2900000
+        }
+      }
+    };
+
+Also, you need to unlock your geth account for the local use. Write the following to your geth console:
+
+    personal.unlockAccount(eth.accounts[0], "ThePasswordYouUsedInStartingMist")
+
+Now Truffle can deploy contracts to the testnet. First be sure to wait that Mist has completely synced. Mist shows the sync situation in the bottom left. There should be zero blocks left. Then write:
+
+    truffle deploy
+
+Now you published your first token to Ethereum testnet, and as you were the contract deployer you got the initial ten Fintech tokens!
+
+You can now use Mist to transfer your tokens to anyone else. Note that the person receiving the tokens needs to set up the token into their wallet by adding in the contract address you got from deploying the contract. If everyone uses the same token name and currency symbol, then it might be confusing as there are many different tokens with the same name, but this is not in any way illegal situation. The contract address identifies the token.
+
+If you would want to deploy it in the real public Ethereum blockchain, you would need real Ethers to pay for the contract deployment, but the overall process is identical to the testnet deployment and token use.
 
 ## See also
 
