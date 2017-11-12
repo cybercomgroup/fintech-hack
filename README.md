@@ -233,7 +233,7 @@ Now Truffle can deploy contracts to the testnet. First be sure to wait that Mist
 
     truffle deploy
 
-Remember to store the token address you get!
+Remember to store the token contract address you get!
 
     FintechToken: 0xd6278722a1bd3c5ffe92320c35a766bc7b7dbc9e
 
