@@ -261,6 +261,8 @@ Now you can see your tokens in the wallet and can transfer them like this:
 
 ![Testnet4](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/testnet4.png "Testnet4")
 
+You can also use Ropsten testnet blockchain explorer to look at the transactions you committed and the contracts you deployed. Just search your own wallet address here (example from author's address): https://ropsten.etherscan.io/address/0x506C0a3bAB09a130355e15e4803b064aF4F86481
+
 If you would want to deploy it in the real public Ethereum blockchain, you would need real Ethers to pay for the contract deployment, but the overall process is identical to the testnet deployment and token use.
 
 ## See also
