@@ -93,7 +93,7 @@ You are now logged in to your testrpc local Ethereum blockchain and have a consi
 
 ![Metamask 5](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/metamask5.png "Metamask 5")
 
-Now Metamask allows Javascript application on Chrome to access this account through web3 API.
+Now Metamask allows a Javascript application on Chrome to access this account through web3 API.
 
 ## Example token
 
