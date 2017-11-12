@@ -210,7 +210,7 @@ You should see something like this when the syncing is done (it takes about 20 m
 
 ![Mist started on Ropsten](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/ropsten_mist.png "Mist started on Ropsten")
 
-Get free test Ether from here by copy-pasting in your wallet address: http://faucet.ropsten.be:3001/
+Get free test Ether from here by copy-pasting in your wallet address (I suggest getting 6, by doing it twice to have enough for token contract creation): http://faucet.ropsten.be:3001/
 
 Now we can also deploy your new Fintech token to the testnet for public testing and use.
 
@@ -242,6 +242,24 @@ Remember to store the token contract address you get (This is a deployed Fintech
 Now you published your first token to Ethereum testnet, and as you were the contract deployer you got the initial ten Fintech tokens!
 
 You can now use Mist to transfer your tokens to anyone else. Note that the person receiving the tokens needs to set up the token into their wallet by adding in the contract address you got from deploying the contract. If everyone uses the same token name and currency symbol, then it might be confusing as there are many different tokens with the same name, but this is not in any way illegal situation. The contract address identifies the token.
+
+Now you can add your token to Mist so that you can verify that you actually got 10 of them, and can freely transfer them to anyone:
+
+Add a token to "watch" in Mist contracts tab and then here:
+
+![Testnet1](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/testnet1.png "Testnet1")
+
+Add the contract address, the other info is autofilled because of the HumanStandardToken interface.
+
+![Testnet2](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/testnet2.png "Testnet2")
+
+Now you see you have 10 Fintech tokens in your testnet wallet!
+
+![Testnet3](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/testnet3.png "Testnet3")
+
+Now you can see your tokens in the wallet and can transfer them like this:
+
+![Testnet4](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/testnet4.png "Testnet4")
 
 If you would want to deploy it in the real public Ethereum blockchain, you would need real Ethers to pay for the contract deployment, but the overall process is identical to the testnet deployment and token use.
 
