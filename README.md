@@ -2,6 +2,8 @@
 
 The hacking event is organized at 2017-11-22 in Tampere, Finland.
 
+This workshop is based on Linux, so if you are running something else, you can adapt the instructions as required, or do this on a Linux virtual machine, for example using VirtualBox.
+
 ## Prerequisites
 
 Install go-ethereum (geth): https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum
