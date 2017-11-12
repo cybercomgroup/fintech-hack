@@ -235,9 +235,9 @@ Now Truffle can deploy contracts to the testnet. First be sure to wait that Mist
 
     truffle deploy
 
-Remember to store the token contract address you get!
+Remember to store the token contract address you get (This is a deployed FintechToken by the author to the Ethereum Ropsten testnet)!
 
-    FintechToken: 0xd6278722a1bd3c5ffe92320c35a766bc7b7dbc9e
+    FintechToken: 0x6fc2d87e14030b4e666626cf2d7fdcf567007ed7
 
 Now you published your first token to Ethereum testnet, and as you were the contract deployer you got the initial ten Fintech tokens!
 
