@@ -233,6 +233,10 @@ Now Truffle can deploy contracts to the testnet. First be sure to wait that Mist
 
     truffle deploy
 
+Remember to store the token address you get!
+
+    FintechToken: 0xd6278722a1bd3c5ffe92320c35a766bc7b7dbc9e
+
 Now you published your first token to Ethereum testnet, and as you were the contract deployer you got the initial ten Fintech tokens!
 
 You can now use Mist to transfer your tokens to anyone else. Note that the person receiving the tokens needs to set up the token into their wallet by adding in the contract address you got from deploying the contract. If everyone uses the same token name and currency symbol, then it might be confusing as there are many different tokens with the same name, but this is not in any way illegal situation. The contract address identifies the token.
