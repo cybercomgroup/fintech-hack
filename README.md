@@ -138,7 +138,7 @@ We will create the actual token contract. Create a new file named ``contracts/Fi
         }
     }
 
-The contract is really simple, as it only calls the base class HumanStandardToken with defined values of 1000 units total, the name of the token "Fintech", two decimals shown by default, and with the token currency symbol of "FIN".
+The contract is really simple, as it only calls the base class HumanStandardToken with defined values of 10 units total (2 decimals), the name of the token "Fintech", two decimals shown by default, and with the token currency symbol of "FIN".
 
 Then we need to define the migrations for deploying the contract. Edit the file ``migrations/2_deploy_contracts.js`` so that it contains only the following (removing the Truffle default contracts)):
 
@@ -210,7 +210,7 @@ You should see something like this when the syncing is done (it takes about 20 m
 
 ![Mist started on Ropsten](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/ropsten_mist.png "Mist started on Ropsten")
 
-Get free test Ether from here by copy-pasting in your wallet address (I suggest getting 6, by doing it twice to have enough for token contract creation): http://faucet.ropsten.be:3001/
+Get free test Ether from here by copy-pasting in your wallet address: http://faucet.ropsten.be:3001/
 
 Now we can also deploy your new Fintech token to the testnet for public testing and use.
 
