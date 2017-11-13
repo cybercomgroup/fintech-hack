@@ -194,7 +194,7 @@ Local testing is one thing, but to really test your contract, you should deploy 
 
 Kill your testrpc with ctrl-c. Next we will use a real Ethereum blockchain, a testnet which only uses test Ethers with no value.
 
-Start geth on testnet with console:
+Start geth on testnet with console (This starts a geth console on your terminal which you will need later):
 
     geth --testnet --rpc console 2>> geth.log
 
