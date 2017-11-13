@@ -206,7 +206,7 @@ Start Mist on the test network (use the datadir from the previous step):
 
     mist --network test --rpc /home/tero/.ethereum/testnet/geth.ipc
 
-You should see something like this when the syncing is done (it takes about 20 minutes on Ropsten testnet):
+You should see something like this when the syncing is done (it takes about 20 minutes on Ropsten testnet, but luckily you did that already):
 
 ![Mist started on Ropsten](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/ropsten_mist.png "Mist started on Ropsten")
 
