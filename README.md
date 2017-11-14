@@ -6,18 +6,17 @@ This workshop is based on Linux (Ubuntu), so if you are running something else, 
 
 ## Prerequisites
 
-You will need a rather lot of disk space to run a full Ethereum node. Testnet blockchain requires around 12 GB, and the main Ethereum blockchain takes around 30 GB. More space is better. If you are low on disk-space you can also run Geth in a light client mode which makes the disk space requirements negligible.
+You will need a rather lot of disk space to run a full Ethereum node. Testnet blockchain requires around 12 GB, and the main Ethereum blockchain takes around 30 GB. More space is better. This is why we are running Geth in light mode in this exercise, which can run with less than 1 GB of disk space, but it is not a full node and does not take part in Ethereum blockchain replication.
 
 Install go-ethereum (geth): https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum
 
-Make geth sync to the test network (syncing will take about 20 minutes on a normal laptop, so you want to do this first):
+Make geth sync to the test network (syncing will take about 5 minutes on a normal laptop, so you want to do this first):
 
-    geth --testnet
+    geth --testnet --light
 
-Geth has synchronized to the current time when new single blocks are received at about one per 10 seconds and the block number is around 2 million (at the time of writing) like so:
+Geth has synchronized to the current time when new single blocks (count=1) are received at about one per 10 seconds and the block number is around 2 million (at the time of writing) like so:
 
-    INFO [10-17|15:16:45] Imported new chain segment               blocks=1    txs=7    mgas=0.186   elapsed=24.612ms  mgasps=7.552   number=1888445 hash=484a3d…39bd16
-    INFO [10-17|15:16:52] Imported new chain segment               blocks=1    txs=0    mgas=0.000   elapsed=10.174ms  mgasps=0.000   number=1888446 hash=0d6d6e…6e7d30
+    INFO [11-14|11:44:27] Imported new block headers               count=1    elapsed=8.523ms   number=2068408 hash=57eb22…c86b59 ignored=0
 
 You should kill the geth process when it has synced, so that it does not conflict with the next instructions.
 
@@ -198,7 +197,7 @@ Kill your testrpc with ctrl-c. Next we will use a real Ethereum blockchain, a te
 
 Start geth on testnet with console (This starts a geth console on your terminal which you will need later):
 
-    geth --testnet --rpc console 2>> geth.log
+    geth --testnet --rpc --light console 2>> geth.log
 
 See the value geth uses for its ipc file, you'll need it in the next step, like this:
 
@@ -208,7 +207,7 @@ Start Mist on the test network (use the datadir from the previous step):
 
     mist --network test --rpc /home/tero/.ethereum/testnet/geth.ipc
 
-You should see something like this when the syncing is done (it takes about 20 minutes on Ropsten testnet, but luckily you did that already):
+You should see something like this when the syncing is done (it takes about 5 minutes on Ropsten testnet, but luckily you did that already):
 
 ![Mist started on Ropsten](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/ropsten_mist.png "Mist started on Ropsten")
 
