@@ -6,7 +6,7 @@ This workshop is based on Linux (Ubuntu), so if you are running something else, 
 
 ## Prerequisites
 
-You will need a rather lot of disk space to run a full Ethereum node. Testnet blockchain requires around 12 GB, and the main Ethereum blockchain takes around 30 GB. More space is better. This is why we are running Geth in light mode in this exercise, which can run with less than 1 GB of disk space, but it is not a full node and does not take part in Ethereum blockchain replication.
+You will need a rather lot of disk space to run a full Ethereum node. Testnet blockchain requires around 12 GB, and the main Ethereum blockchain takes around 30 GB. More space is better. This is why we are running Geth in experimental light mode in this exercise, which can run with less than 1 GB of disk space, but it is not a full node and does not take part in Ethereum blockchain replication.
 
 Install go-ethereum (geth): https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum
 
