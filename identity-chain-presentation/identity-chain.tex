@@ -1,0 +1,89 @@
+\documentclass[8pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{default}
+\usepackage{hyperref}
+\usepackage{textpos}
+\usepackage{verbatimbox}
+\usetheme{Copenhagen}
+
+\title{Identity chain management for banks: law 7.8.2009/617}
+\subtitle{``Laki vahvasta sähköisestä tunnistamisesta ja sähköisistä luottamuspalveluista''\\17 §: ``Tunnistusvälineen hakijana olevan luonnollisen henkilön tunnistaminen''}
+\author{Tero Keski-Valkama}
+\institute{\includegraphics[height=1.4cm]{CybercomG_logo_Classic_RGB.png}}
+\date{2017-11-22}
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(10.95cm,-0.8cm)
+\includegraphics[height=0.8cm]{cybercom-blue.png}
+\end{textblock*}}
+
+
+\begin{document}
+
+\frame{\titlepage}
+ 
+\begin{frame}
+\frametitle{Why?}
+
+\begin{itemize}
+ \item The law for electronic identification includes the 17 § which allows banks to perform the first identification of a new customer using an electronic strong identification method.
+       In practice this means identification through electronic identification performed by another bank.
+ \item The text of the relevant part of the law: ``Olemassa olevan vahvan sähköisen tunnistusvälineen avulla on voitava hakea vastaavan tasoista sähköistä tunnistusvälinettä. Aiempaan tunnistukseen luottava vahvan sähköisen tunnistuspalvelun tarjoaja vastaa mahdollisesta tunnistuksen virheellisyydestä suhteessa vahingon kärsineeseen.''
+ \item So, what happens if a criminal uses a stolen strong authentication of user X in bank A to create an account in another bank B?
+ \item The consumer reports the credentials as stolen to bank A, and bank A revokes the credentials. What happens to the new credentials in bank B?
+ \item Cybercom and blockchain to the rescue! Let's store all the identity related actions in an unmodifiable, shared log.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Background – Guardtime Keyless Signature Infrastructure}
+
+\begin{itemize}
+ \item Guardtime KSI offers a convenient service component for establishing specific kinds of guarantees regarding trust.
+ \item In practice KSI can be used to prove that a specific document has existed at a specific point of time, by storing the hash digest of the document in an unmodifiable hash calendar (merkle tree).
+ \item Guardtime only receives the hash digest of the document, never the whole document.
+ \item In Cybercom Identity Chain proposal Guardtime KSI is used to offer additional guarantees that the shared identity event log is unmodifiable.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Background – IBM Hyperledger Fabric}
+
+\begin{itemize}
+ \item In addition to hash digests, we will also need to store the master data in a manner that is robustly available to all cooperating banks.
+ \item IBM Hyperledger Fabric is a platform for implementing consortium blockchains.
+ \item As opposed to public blockchains like Ethereum, consortium blockchains do not require an associated cryptocurrency and they require a trusted party that manages consortium memberships.
+ \item Storing a shared registry of identity events in a consortium blockchain makes it unmodifiable after once written, and available to all cooperating parties.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Architecture}
+
+\includegraphics[width=0.9\textwidth]{./deployment.png}
+
+\begin{itemize}
+ \item Banks can work as infrastructure providers and/or identity providers in the architecture.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Operation}
+\begin{columns}
+\begin{column}{0.3\textwidth}
+\includegraphics[width=0.5\textwidth]{identity_state.png}
+\end{column}
+\begin{column}{0.3\textwidth}
+\includegraphics[width=1\textwidth]{party_state.png}
+\end{column}
+\end{columns}
+
+
+\end{frame}
+\end{document}
+
