@@ -74,22 +74,18 @@
 
 \begin{frame}[fragile]
 \frametitle{Operation}
-\begin{columns}
-\begin{column}{0.3\textwidth}
-\begin{figure}
- \includegraphics[width=0.5\textwidth]{identity_state.png}
- \caption{Identity state machine}
-\end{figure}
-
-\end{column}
-\begin{column}{0.3\textwidth}
-\begin{figure}
- \includegraphics[width=1\textwidth]{party_state.png}
- \caption{Identity provider (party) state machine}
-\end{figure}
-\end{column}
-\end{columns}
-
+\begin{enumerate}
+ \item Person A has their identity for Bank X stolen
+ \item Stolen identity (X) used to create a new account in Bank Y
+ \item Person A retroactively revokes their identity at Bank X
+ \item Fake identity (Y) used to create a new account in Bank Z
+ \item Fake identity (Y) used in criminal activity
+\end{enumerate}
+\begin{itemize}
+ \item If Bank Z did not check the identity chain state in blockchain at (4), then bank Z is liable for damages.
+ \item If Bank Z did check, but Bank X did not correctly mark this revocation in time to the blockchain to prevent (4), then Bank X is liable.
+ \item Liability is based on consortium membership contract. Blockchain provides an indisputable log of events to determine liability.
+\end{itemize}
 
 \end{frame}
 \end{document}
