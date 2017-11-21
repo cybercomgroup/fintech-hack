@@ -1,4 +1,4 @@
-# Cybercom Materials for Fintech Hack
+# Cybercom Materials for Fintech Hack: "Let's Code Ethereum!"
 
 The hacking event is organized at 2017-11-22 in Tampere, Finland.
 
