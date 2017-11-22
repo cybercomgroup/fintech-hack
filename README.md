@@ -117,11 +117,6 @@ You can look at the example code, but it's not a standard token, just an example
 
 Let's make a proper HumanStandardToken called FintechToken.
 
-First, you need to remove the example token code from the Truffle project leaving only Migrations contract:
-
-    rm test/*
-    rm contracts/MetaCoin.sol contracts/ConvertLib.sol
-
 Then we will copy the minimal token base classes (Token.sol, StandardToken.sol, HumanStandardToken.sol) from [ConsenSys examples](https://github.com/ConsenSys/Tokens):
 
     cp ../ethereum-token/*.sol contracts/
@@ -143,7 +138,7 @@ We will create the actual token contract. Create a new file named ``contracts/Fi
 
 The contract is really simple, as it only calls the base class HumanStandardToken with defined values of 10 units total (2 decimals), the name of the token "Fintech", two decimals shown by default, and with the token currency symbol of "FIN".
 
-Then we need to define the migrations for deploying the contract. Edit the file ``migrations/2_deploy_contracts.js`` so that it contains only the following (removing the Truffle default contracts):
+Then we need to define the migrations for deploying the contract. Edit the file ``migrations/2_deploy_contracts.js`` so that it contains only the following (removing the Truffle default contracts if they are referenced there):
 
     var FintechToken = artifacts.require("./FintechToken.sol");
     
