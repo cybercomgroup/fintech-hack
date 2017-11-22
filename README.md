@@ -222,6 +222,10 @@ You should see something like this when the syncing is done (it takes about 5 mi
 
 Get free test Ether from here by copy-pasting in your wallet address: https://ethtools.com/ropsten/tools/faucet/
 
+If it doesn't work, you need to use Rinkeby testnet faucet instead: https://www.rinkeby.io/#faucet
+
+Note that in that case you need to use rinkeby testnet in Geth and Mist as well.
+
 Now we can also deploy your new Fintech token to the testnet for public testing and use.
 
 First set gaslimit for Truffle, so that it does not try to use unreasonable amounts of gas. Edit the file ``truffle.js`` like so:
