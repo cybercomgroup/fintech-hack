@@ -220,7 +220,7 @@ You should see something like this when the syncing is done (it takes about 5 mi
 
 ![Mist started on Ropsten](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/ropsten_mist.png "Mist started on Ropsten")
 
-Get free test Ether from here by copy-pasting in your wallet address: http://faucet.ropsten.be:3001/
+Get free test Ether from here by copy-pasting in your wallet address: https://ethtools.com/ropsten/tools/faucet/
 
 Now we can also deploy your new Fintech token to the testnet for public testing and use.
 
