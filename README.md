@@ -222,6 +222,8 @@ You should see something like this when the syncing is done (it takes about 5 mi
 
 Get free test Ether from here by copy-pasting in your wallet address: https://ethtools.com/ropsten/tools/faucet/
 
+Alternative faucet for Ropsten: https://blog.b9lab.com/when-we-first-built-our-faucet-we-deployed-it-on-the-morden-testnet-70bfbf4e317e
+
 If it doesn't work, you need to use Rinkeby testnet faucet instead: https://www.rinkeby.io/#faucet
 
 Note that in that case you need to use rinkeby testnet in Geth and Mist as well.
