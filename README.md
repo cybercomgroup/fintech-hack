@@ -162,6 +162,7 @@ Now see again your balance in Metamask in Chrome, it should be 100 ETH, and no t
 ![DeployLocal 1](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/deploy_local1.png "DeployLocal 1")
 
 NOTE! A change in Truffle! Now you need to create `truffle.js` yourself with this content:
+
     module.exports = {
       networks: {
         development: {
