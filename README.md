@@ -226,6 +226,8 @@ Alternative faucet for Ropsten: https://blog.b9lab.com/when-we-first-built-our-f
 
 A MetaMask faucet if you connect your MetaMask to your geth you can use this address on Chrome: https://faucet.metamask.io/
 
+To use MetaMask faucet, you need to connect MetaMask to your Mist account using account import in MetaMask and point it to the private key file of Geth.
+
 If it doesn't work, you need to use Rinkeby testnet faucet instead: https://www.rinkeby.io/#faucet
 
 Note that in that case you need to use rinkeby testnet in Geth and Mist as well.
