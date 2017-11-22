@@ -208,9 +208,9 @@ Start geth on testnet with console (This starts a geth console on your terminal 
 
     geth --testnet --rpc --light console 2>> geth.log
 
-See the value geth uses for its ipc file, you'll need it in the next step, like this:
+See the value geth uses for its ipc file in `geth.log`, you'll need it in the next step, like this:
 
-    datadir: /home/tero/.ethereum/testnet
+    IPC endpoint opened: /home/tero/.ethereum/testnet/geth.ipc
 
 Start Mist on the test network (use the datadir from the previous step):
 
