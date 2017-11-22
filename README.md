@@ -257,6 +257,8 @@ Now Truffle can deploy contracts to the testnet. First be sure to wait that Mist
 
 If this says invalid address then that is because Truffle fails in connecting to fast syncing geth: https://github.com/ethereum/go-ethereum/issues/15366
 
+Pending fixing that bug, you will need to run Geth in full node mode (without the light parameter) and syncing that takes half an hour or so and takes several tens of GB of space.
+
 Remember to store the token contract address you get (This is a deployed FintechToken by the author to the Ethereum Ropsten testnet)!
 
     FintechToken: 0x6fc2d87e14030b4e666626cf2d7fdcf567007ed7
