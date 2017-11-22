@@ -214,7 +214,7 @@ See the value geth uses for its ipc file in `geth.log`, you'll need it in the ne
 
 Start Mist on the test network (use the datadir from the previous step):
 
-    mist --network test --rpc /home/tero/.ethereum/testnet/geth.ipc
+    mist --network test --light --rpc /home/tero/.ethereum/testnet/geth.ipc
 
 You should see something like this when the syncing is done (it takes about 5 minutes on Ropsten testnet, but luckily you did that already):
 
@@ -254,6 +254,8 @@ Also, you need to unlock your geth account for the local use. Write the followin
 Now Truffle can deploy contracts to the testnet. First be sure to wait that Mist has completely synced. Mist shows the sync situation in the bottom left. There should be zero blocks left. Then write:
 
     truffle deploy
+
+If this says invalid address then that is because Truffle fails in connecting to fast syncing geth: https://github.com/ethereum/go-ethereum/issues/15366
 
 Remember to store the token contract address you get (This is a deployed FintechToken by the author to the Ethereum Ropsten testnet)!
 
