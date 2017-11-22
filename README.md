@@ -224,6 +224,8 @@ Get free test Ether from here by copy-pasting in your wallet address: https://et
 
 Alternative faucet for Ropsten: https://blog.b9lab.com/when-we-first-built-our-faucet-we-deployed-it-on-the-morden-testnet-70bfbf4e317e
 
+A MetaMask faucet if you connect your MetaMask to your geth you can use this address on Chrome: https://faucet.metamask.io/
+
 If it doesn't work, you need to use Rinkeby testnet faucet instead: https://www.rinkeby.io/#faucet
 
 Note that in that case you need to use rinkeby testnet in Geth and Mist as well.
