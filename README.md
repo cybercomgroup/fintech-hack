@@ -161,6 +161,17 @@ Now see again your balance in Metamask in Chrome, it should be 100 ETH, and no t
 
 ![DeployLocal 1](https://github.com/cybercomgroup/fintech-hack/raw/master/pics/deploy_local1.png "DeployLocal 1")
 
+NOTE! A change in Truffle! Now you need to create `truffle.js` yourself with this content:
+    module.exports = {
+      networks: {
+        development: {
+          host: "localhost",
+          port: 8545,
+          network_id: "*" // Match any network id
+        }
+      }
+    };
+
 Now let's deploy the contract. Note that deployment costs Ethers, but that is not a problem as we are using a local test network with 100 ETH of virtual currency:
 
     truffle deploy
